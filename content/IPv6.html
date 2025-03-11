@@ -2,7 +2,7 @@
         <head>
         <title>cd_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,8 +142,34 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">task4 << <a href='task4.html'>Previous</a> <a href='task6.html'>Next</a> >> task6<br /><h1>task5</h1>
-<br />task4 << <a href='task4.html'>Previous</a> <a href='task6.html'>Next</a> >> task6</div>
+    <div id="tipue_search_content">task1 << <a href='task1.html'>Previous</a> <a href='list.html'>Next</a> >> list<br /><h1>IPv6</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.11.3/brython.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="brython()"&gt;
+    &lt;div id="brython_div1"&gt;&lt;/div&gt;
+    
+    &lt;script type="text/python"&gt;
+    from browser import document, html
+    
+    base_ipv6 = "2001:288:6004:17:fff1:cd25:0000:b0"
+    port = "8000"
+    
+    div = document["brython_div1"]
+    
+    for i in range(1, 67):
+        ipv6_address = base_ipv6 + f"{i:02x}"
+        url = f"http://[{ipv6_address}]:{port}"
+        link = html.A(f"學員 {i}", href=url, target="_blank")
+        div &lt;= html.P(link)
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p></p><br />task1 << <a href='task1.html'>Previous</a> <a href='list.html'>Next</a> >> list</div>
         
     <!-- footer -->
       <div class="container">
